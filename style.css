@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    z-index: 1000;
+    border: 2px solid #E50914;
+}
+.skip-link:focus {
+    left: 10px;
+}
+
+.main-header {
+    background-color: #080808;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #E50914;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin: 0;
+    color: #E50914;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #E50914;
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+}
+.search-bar input {
+    border: 1px solid #333;
+    background-color: #222;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+.search-bar button {
+    border: none;
+    background-color: #E50914;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid #555;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #222;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(229, 9, 20, 0.4);
+}
+
+.movie-card img {
+    border: none;
+    padding: 0;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    text-align: center;
+    margin: 0.5rem 0;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    height: 3.2em;
+    overflow: hidden;
+}
+
+.movie-grid .movie-card:nth-child(odd) {
+    border: 1px solid #333;
+}
+
+.movie-details {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.movie-details img {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.movie-details-info {
+    flex-basis: 70%;
+    flex-grow: 1;
+}
+
+.cta-button {
+    background-color: #E50914;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.cta-button:hover {
+    background-color: #f6121d;
+}
+
+.movie-trailer {
+    margin-top: 2rem;
+}
+.movie-trailer h3 {
+    font-size: 1.5rem;
+}
+.trailer-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+.trailer-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.related-movies {
+    margin-top: 3rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    background-color: #080808;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
