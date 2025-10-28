@@ -21,6 +21,16 @@
       text-align: center;
       margin-bottom: 30px;
     }
+    
+    .search-input {
+      margin: 20px 0;
+      padding: 10px;
+      width: 300px;
+      border: 2px solid #555;
+      border-radius: 5px;
+      background-color: #222;
+      color: white;
+    }
   </style>
 </head>
 
@@ -41,62 +51,57 @@
     <section>
       <h2>Phim Nổi Bật</h2>
 
+      <!-- Thêm input field để test onfocus/onblur -->
+      <input type="text" 
+             class="search-input" 
+             placeholder="Tìm kiếm phim..." 
+             onfocus="myFunction()" 
+             onblur="myFunction()">
+
       <div id="image">Hover over an image below to display here.</div>
 
-      <div class="movie-grid">
-        <article class="movie-card">
-          <a href="chi_tiet.html">
-            <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470wx700h-cvcn_1.jpg"
-                 alt="CỤC VÀNG CỦA NGOẠI"
-                 onmouseover="upDate(this)" onmouseout="unDo()">
-          </a>
-          <h3>CỤC VÀNG CỦA NGOẠI</h3>
-        </article>
+      <div class="thumbs">
+        <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470wx700h-cvcn_1.jpg"
+             alt="CỤC VÀNG CỦA NGOẠI - Phim cảm động về tình bà cháu"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()"
+             onmouseover="bigImg(this)"
+             onmouseout="normalImg(this)">
 
-        <article class="movie-card">
-          <a href="chi_tiet.html">
-            <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_gio_van_thoi_1.jpg"
-                 alt="GIÓ VẪN THỔI"
-                 onmouseover="upDate(this)" onmouseout="unDo()">
-          </a>
-          <h3>GIÓ VẪN THỔI</h3>
-        </article>
+        <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_gio_van_thoi_1.jpg"
+             alt="GIÓ VẪN THỔI - Phim tâm lý tình cảm"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()"
+             onmouseover="bigImg(this)"
+             onmouseout="normalImg(this)">
 
-        <article class="movie-card">
-          <a href="chi_tiet.html">
-            <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/b/t/bts_21_sowoozoo_1080x1350_up.jpg"
-                 alt="BTS 2021 MUSTER SOWOOZOO"
-                 onmouseover="upDate(this)" onmouseout="unDo()">
-          </a>
-          <h3>BTS 2021 MUSTER SOWOOZOO REMASTERED</h3>
-        </article>
+        <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/b/t/bts_21_sowoozoo_1080x1350_up.jpg"
+             alt="BTS 2021 MUSTER SOWOOZOO REMASTERED - Concert film của BTS"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()"
+             onmouseover="bigImg(this)"
+             onmouseout="normalImg(this)">
 
-        <article class="movie-card">
-          <a href="chi_tiet.html">
-            <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/t/y/ty3-sneak-main_poster-2-layered.jpg"
-                 alt="TEE YOD: QUỶ ĂN TẠNG PHẦN 3"
-                 onmouseover="upDate(this)" onmouseout="unDo()">
-          </a>
-          <h3>TEE YOD: QUỶ ĂN TẠNG PHẦN 3</h3>
-        </article>
+        <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/t/y/ty3-sneak-main_poster-2-layered.jpg"
+             alt="TEE YOD: QUỶ ĂN TẠNG PHẦN 3 - Phim kinh dị Thái Lan"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()"
+             onmouseover="bigImg(this)"
+             onmouseout="normalImg(this)">
 
-        <article class="movie-card">
-          <a href="chi_tiet.html">
-            <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/5/457x590-ncance.jpg"
-                 alt="NĂM CỦA ANH, NGÀY CỦA EM"
-                 onmouseover="upDate(this)" onmouseout="unDo()">
-          </a>
-          <h3>NĂM CỦA ANH, NGÀY CỦA EM</h3>
-        </article>
+        <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/5/457x590-ncance.jpg"
+             alt="NĂM CỦA ANH, NGÀY CỦA EM - Phim tình cảm lãng mạn"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()"
+             onmouseover="bigImg(this)"
+             onmouseout="normalImg(this)">
 
-        <article class="movie-card">
-          <a href="chi_tiet.html">
-            <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470x700-tqtt_1.jpg"
-                 alt="TỔ QUỐC TRONG TIM"
-                 onmouseover="upDate(this)" onmouseout="unDo()">
-          </a>
-          <h3>TỔ QUỐC TRONG TIM: THE CONCERT FILM</h3>
-        </article>
+        <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470x700-tqtt_1.jpg"
+             alt="TỔ QUỐC TRONG TIM: THE CONCERT FILM - Chương trình ca nhạc đặc biệt"
+             onmouseover="upDate(this)" 
+             onmouseout="unDo()"
+             onmouseover="bigImg(this)"
+             onmouseout="normalImg(this)">
       </div>
     </section>
   </main>
