@@ -104,107 +104,66 @@ img {
     background-color: #222;
 }
 
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-.movie-card {
-    background-color: #1f1f1f;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.movie-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(229, 9, 20, 0.4);
-}
-
-.movie-card img {
-    border: none;
-    padding: 0;
-    border-radius: 8px 8px 0 0;
+/* Interactive Photo Gallery Styles */
+#image {
     width: 100%;
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
-}
-
-.movie-card h3 {
-    text-align: center;
-    margin: 0.5rem 0;
-    padding: 0 0.5rem;
-    font-size: 1rem;
-    height: 3.2em;
-    overflow: hidden;
-}
-
-.movie-grid .movie-card:nth-child(odd) {
-    border: 1px solid #333;
-}
-
-.movie-details {
+    height: 400px;
+    background-color: #111;
+    border: 2px solid #555;
+    border-radius: 10px;
     display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.movie-details img {
-    flex-basis: 300px;
-    flex-shrink: 0;
-    width: 300px;
-}
-
-.movie-details-info {
-    flex-basis: 70%;
-    flex-grow: 1;
-}
-
-.cta-button {
-    background-color: #E50914;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 1rem;
-    font-weight: bold;
-}
-.cta-button:hover {
-    background-color: #f6121d;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
-.movie-trailer {
-    margin-top: 2rem;
+#image:focus {
+    outline: 3px solid #E50914;
+    outline-offset: 2px;
 }
-.movie-trailer h3 {
-    font-size: 1.5rem;
+
+.thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-content: center;
 }
-.trailer-video {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-}
-.trailer-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.thumbs img {
     width: 100%;
-    height: 100%;
-    border: 0;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+    border: 2px solid transparent;
 }
 
-.related-movies {
-    margin-top: 3rem;
+.thumbs img:hover {
+    transform: scale(1.05);
+    border-color: #E50914;
+}
+
+.thumbs img:focus {
+    outline: 3px solid #E50914;
+    outline-offset: 2px;
+    transform: scale(1.05);
+}
+
+/* Focus styles for accessibility */
+.thumbs img[tabindex]:focus {
+    border-color: #E50914;
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.5);
+}
+
+/* Active state for better UX */
+.thumbs img.active {
+    border-color: #E50914;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
 }
 
 footer {
@@ -219,4 +178,68 @@ footer {
 
 footer p {
     margin: 0.5rem 0;
+}
+
+/* Remove movie-specific styles that aren't needed */
+.movie-grid,
+.movie-card,
+.movie-details,
+.movie-trailer,
+.related-movies,
+.cta-button {
+    display: none;
+}
+/* Thêm vào cuối file style.css */
+
+/* Interactive Photo Gallery Styles */
+#image {
+    width: 100%;
+    height: 400px;
+    background-color: #111;
+    border: 2px solid #555;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+#image:focus {
+    outline: 3px solid #E50914;
+    outline-offset: 2px;
+}
+
+.thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.thumbs img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    border: 2px solid #555;
+}
+
+.thumbs img:hover {
+    transform: scale(1.05);
+    border-color: #E50914;
+}
+
+/* Focus styles for accessibility */
+.thumbs img:focus {
+    outline: 3px solid #E50914;
+    outline-offset: 2px;
+    transform: scale(1.05);
+    border-color: #E50914;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
 }
