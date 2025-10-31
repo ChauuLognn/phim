@@ -148,11 +148,39 @@ img {
     border-color: #E50914;
 }
 
-.thumbs img:focus {
-    outline: 3px solid #E50914;
-    outline-offset: 2px;
-    transform: scale(1.05);
+.thumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap;
 }
+.thumbs img {
+    width: 120px;
+    height: 160px;
+}
+.gallery-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+#image {
+    width: 50%;
+    height: 500px;
+}
+
+.thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+
+
 
 /* Focus styles for accessibility */
 .thumbs img[tabindex]:focus {
